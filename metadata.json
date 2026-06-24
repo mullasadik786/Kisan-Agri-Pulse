@@ -1,0 +1,6 @@
+{
+  "name": "Kisan-AgriPulse",
+  "description": "An AI-powered agricultural workspace featuring scheme navigators, pest & crop analysts, hyper-local planning alerts, and an Ideathon builder.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f7fee7; /* very light lime agricultural ambient */
+  color: #1f2937;
+}
+
+/* Custom scrollbars for clean dashboards */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.5);
+}
+
+/* Custom Live Wallpaper Animations */
+@keyframes live-pan {
+  0% { transform: scale(1.04) translate(0px, 0px); }
+  50% { transform: scale(1.08) translate(-6px, -4px); }
+  100% { transform: scale(1.04) translate(0px, 0px); }
+}
+
+@keyframes float-petal {
+  0% { transform: translateY(10%) translateX(0px) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.4; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(-110%) translateX(25px) rotate(180deg); opacity: 0; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.75; }
+}
+
+.animate-live-pan {
+  animation: live-pan 32s ease-in-out infinite;
+}
+
+.animate-float-petal-1 {
+  animation: float-petal 12s linear infinite;
+}
+
+.animate-float-petal-2 {
+  animation: float-petal 16s linear infinite;
+  animation-delay: 3s;
+}
+
+.animate-float-petal-3 {
+  animation: float-petal 20s linear infinite;
+  animation-delay: 7s;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
